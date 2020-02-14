@@ -1,6 +1,7 @@
 pipeline {
   agent any
-    stages ('Build') {
+  stages {
+    stage ('Build') {
      steps {
        echo 'Running build automation'
        sh './gradlew build --no-daemon'
@@ -8,6 +9,7 @@ pipeline {
       }
      }
    }
+}
  
          
   
